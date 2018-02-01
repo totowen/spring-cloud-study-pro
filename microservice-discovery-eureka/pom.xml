@@ -33,7 +33,6 @@
           <!-- 如果要将docker镜像push到DockerHub上去的话，这边的路径要和repo路径一致 -->
           <imageName>totowen/microservice-discovery-eureka</imageName>
           <dockerDirectory>${project.basedir}/src/main/docker</dockerDirectory>
-
           <resources>
             <resource>
               <targetPath>/</targetPath>
@@ -43,6 +42,7 @@
           </resources>
           <!-- 以下两行是为了docker push到DockerHub使用的。 -->
           <serverId>docker-hub</serverId>
+          <registryUrl>https://index.docker.io/v1/</registryUrl>
         </configuration>
       </plugin>
     </plugins>
